@@ -4,6 +4,9 @@ public class Clickandswap : MonoBehaviour
 {
     private Transform firstSelected = null;
 
+    // Set the max distance allowed for a valid swap
+    private float allowedSwapDistance = 2.5f;
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -22,12 +25,21 @@ public class Clickandswap : MonoBehaviour
                 }
                 else
                 {
-                    // Swap positions
-                    Vector3 tempPos = firstSelected.position;
-                    firstSelected.position = clicked.position;
-                    clicked.position = tempPos;
+                    float distance = Vector3.Distance(firstSelected.position, clicked.position);
 
-                    Debug.Log($"Swapped {firstSelected.name} with {clicked.name}");
+                    if (distance <= allowedSwapDistance)
+                    {
+                        // Swap positions
+                        Vector3 tempPos = firstSelected.position;
+                        firstSelected.position = clicked.position;
+                        clicked.position = tempPos;
+
+                        Debug.Log($"Swapped {firstSelected.name} with {clicked.name}");
+                    }
+                    else
+                    {
+                        Debug.Log($"Too far to swap: {firstSelected.name} and {clicked.name} are {distance:F2} units apart.");
+                    }
 
                     // Reset selection
                     firstSelected = null;
