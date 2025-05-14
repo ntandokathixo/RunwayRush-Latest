@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NPC_DialogueTemplate_0: -5980336766133990795
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
