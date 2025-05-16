@@ -11,6 +11,7 @@ public class ObjectMover : MonoBehaviour
 
     [Header("Settings")]
     public float moveSpeed = 2f;
+    public int numb_model;
     public bool loopEnabled = false;
 
     private Dictionary<GameObject, int> objectIndices = new Dictionary<GameObject, int>();
@@ -23,7 +24,7 @@ public class ObjectMover : MonoBehaviour
 
         // Randomize which 9 waypoints get an object
         List<int> availableSpots = new List<int>();
-        for (int i = 0; i < 9; i++) availableSpots.Add(i);
+        for (int i = 0; i < numb_model; i++) availableSpots.Add(i);
 
         for (int i = 0; i < count; i++)
         {
