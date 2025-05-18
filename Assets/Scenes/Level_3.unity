@@ -2904,7 +2904,8 @@ MonoBehaviour:
   - {fileID: 2111584490}
   - {fileID: 1820678475}
   moveSpeed: 2
-  loopEnabled: 0
+  numb_model: 21
+  loopEnabled: 1
 --- !u!1 &815857301
 GameObject:
   m_ObjectHideFlags: 0
