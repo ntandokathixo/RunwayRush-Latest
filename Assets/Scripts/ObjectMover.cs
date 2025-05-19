@@ -3,15 +3,10 @@ using UnityEngine;
 
 public class ObjectMover : MonoBehaviour
 {
-    [Header("Waypoints (should be placed in order)")]
     public List<Transform> waypoints;
-
-    [Header("Objects to move (assign in Inspector)")]
     public List<GameObject> objects;
-
-    [Header("Settings")]
-    public float moveSpeed = 2f;
-    public int numb_model;
+    public int numb_model = 9;
+    public float moveSpeed = 1f;
     public bool loopEnabled = false;
 
     private Dictionary<GameObject, int> objectIndices = new Dictionary<GameObject, int>();
