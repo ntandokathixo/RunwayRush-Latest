@@ -3,13 +3,19 @@ using UnityEngine.UI;
 
 public class TimerSystem : MonoBehaviour
 {
-    public float timer = 45f;
+    public float timer = 5f;
     public Text timerText;
     private bool isPaused = false;
     private bool isGameOver = false;
-    public GameObject gameOverText;
+    public GameObject gameOverPanel;
+    public Button retryButton;
 
-    void Update()
+
+    public void Start()
+    {
+        retryButton.gameObject.SetActive(false);
+    }
+        void Update()
     {
         if (!isPaused && timer > 0f)
         {
@@ -20,7 +26,7 @@ public class TimerSystem : MonoBehaviour
         {
             timer = 0f;
             timerText.text = "0 seconds";
-            Debug.Log("Show’s Over!");
+            retryButton.gameObject.SetActive(true);
         }
 
         if (!isGameOver)
@@ -61,7 +67,7 @@ public class TimerSystem : MonoBehaviour
     {
         isGameOver = true;  
         Time.timeScale = 0f;
-        gameOverText.SetActive(true);
+        gameOverPanel.SetActive(true);
         Debug.Log("Game Over");
     }
 }
