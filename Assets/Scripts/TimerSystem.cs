@@ -9,11 +9,11 @@ public class TimerSystem : MonoBehaviour
     private bool isGameOver = false;
     public GameObject gameOverPanel;
     public Button retryButton;
+    public Slider ProgressSlider;
 
 
     public void Start()
     {
-        retryButton.gameObject.SetActive(false);
     }
         void Update()
     {
@@ -46,6 +46,8 @@ public class TimerSystem : MonoBehaviour
         {
             timer = 0;
         }
+
+        
      }
 
     // Method to pause the timer

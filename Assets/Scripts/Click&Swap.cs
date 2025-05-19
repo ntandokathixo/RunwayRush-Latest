@@ -31,6 +31,7 @@ public class Clickandswap : MonoBehaviour
                         Indicaor.gameObject.SetActive(true);
 
                         // Debug.Log($"First selected: {clicked.name}");
+                        AudioManager.instance.PlayClick(); // sound effect for click 
                     }
                     else
                     {
@@ -42,6 +43,8 @@ public class Clickandswap : MonoBehaviour
                             Vector3 tempPos = firstSelected.position;
                             firstSelected.position = clicked.position;
                             clicked.position = tempPos;
+                            
+                            AudioManager.instance.PlaySwish(); // sound effect for swish
 
                             //Debug.Log($"Swapped {firstSelected.name} with {clicked.name}");
                             Indicaor.position = hit.transform.position;
@@ -52,6 +55,10 @@ public class Clickandswap : MonoBehaviour
                         else
                         {
                             //Debug.Log($"Too far to swap: {firstSelected.name} and {clicked.name} are {distance:F2} units apart.");
+                            AudioManager.instance.PlayError(); // sound effect for error
+                            Indicaor.gameObject.SetActive(false);
+
+
                         }
 
                         // Reset selection
