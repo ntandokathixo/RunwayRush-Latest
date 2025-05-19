@@ -65,7 +65,7 @@ public class Level_Manager : MonoBehaviour
                 messageText.text = "Level 1 - Street";
                 //progressBar.SetLevel(1);
                 break;
-            case 2:
+            case2:
                 messageText.text = "Level 2 - Warehouse";
                 //progressBar.SetLevel(2);
                 break;

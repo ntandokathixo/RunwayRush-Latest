@@ -5,9 +5,6 @@ TagManager:
   serializedVersion: 3
   tags:
   - Model
-  - Pink
-  - Purple
-  - Blue
   layers:
   - Default
   - TransparentFX
