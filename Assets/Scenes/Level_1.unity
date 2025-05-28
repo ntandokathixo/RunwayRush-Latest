@@ -1019,7 +1019,7 @@ MonoBehaviour:
   clickingClip: {fileID: 8300000, guid: 2940e5221680ab842a51948d0524500d, type: 3}
   errorClip: {fileID: 8300000, guid: e5edf4a17cbe1ae49b91115a46714421, type: 3}
   swishClip: {fileID: 8300000, guid: 324990dd47e9cdb4ebe55979bcabf637, type: 3}
-  backgroundMusicClip: {fileID: 8300000, guid: 416869346a65d4c4eb0f0d2a2aa9fc84, type: 3}
+  backgroundMusicClip: {fileID: 8300000, guid: 270f5e77d3fed1843a899639fbf308e1, type: 3}
 --- !u!4 &342220270
 Transform:
   m_ObjectHideFlags: 0
