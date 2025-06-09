@@ -64,6 +64,8 @@ public class ObjectMover : MonoBehaviour
                     if (!isOccupied[i])
                     {
                         MoveTowards(obj, currentIndex, i);
+                        Animator modelAnimator = obj.transform.GetChild(0).GetComponent<Animator>();
+                        modelAnimator.SetBool("idle", true);
                         break;
                     }
                 }
