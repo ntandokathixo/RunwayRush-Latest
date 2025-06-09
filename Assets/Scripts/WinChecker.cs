@@ -60,7 +60,6 @@ public class WinChecker : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(ObjTag))
         {
-            Debug.Log("Collision");
             if (gameObject.name != ObjTag)
             {
                 WinManagerScript.Models.Add(gameObject);

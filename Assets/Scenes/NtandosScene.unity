@@ -820,6 +820,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5054e06c5ff8945b2b799e3690080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowedSwapDistance: 3
+  Indicaor: {fileID: 0}
+  timerScript: {fileID: 0}
 --- !u!61 &315738456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2077,7 +2080,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 1450
   timerText: {fileID: 352297073}
-  gameOverText: {fileID: 1484113269}
+  gameOverPanel: {fileID: 0}
+  retryButton: {fileID: 0}
+  ProgressSlider: {fileID: 0}
 --- !u!4 &534793245
 Transform:
   m_ObjectHideFlags: 0
@@ -2415,7 +2420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2063762043519630310, guid: c449abfaae7ee6241abbdb094b9ea470, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.20591223
+      value: 0.008330255
       objectReference: {fileID: 0}
     - target: {fileID: 2063762043519630310, guid: c449abfaae7ee6241abbdb094b9ea470, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2423,11 +2428,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2063762043519630310, guid: c449abfaae7ee6241abbdb094b9ea470, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.9785705
+      value: -0.9999653
       objectReference: {fileID: 0}
     - target: {fileID: 2063762043519630310, guid: c449abfaae7ee6241abbdb094b9ea470, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -156.234
+      value: -179.045
       objectReference: {fileID: 0}
     - target: {fileID: 5795632446533788999, guid: c449abfaae7ee6241abbdb094b9ea470, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2439,7 +2444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5795632446533788999, guid: c449abfaae7ee6241abbdb094b9ea470, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.20053548
+      value: 0.024819016
       objectReference: {fileID: 0}
     - target: {fileID: 5795632446533788999, guid: c449abfaae7ee6241abbdb094b9ea470, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2447,11 +2452,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5795632446533788999, guid: c449abfaae7ee6241abbdb094b9ea470, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.9796865
+      value: -0.99969196
       objectReference: {fileID: 0}
     - target: {fileID: 5795632446533788999, guid: c449abfaae7ee6241abbdb094b9ea470, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 156.863
+      value: 182.844
       objectReference: {fileID: 0}
     - target: {fileID: 5970282772419511774, guid: c449abfaae7ee6241abbdb094b9ea470, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3150,6 +3155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5054e06c5ff8945b2b799e3690080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowedSwapDistance: 3
+  Indicaor: {fileID: 0}
+  timerScript: {fileID: 0}
 --- !u!212 &776738855
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4818,6 +4826,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5054e06c5ff8945b2b799e3690080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowedSwapDistance: 3
+  Indicaor: {fileID: 0}
+  timerScript: {fileID: 0}
 --- !u!61 &1245225481
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5097,6 +5108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5054e06c5ff8945b2b799e3690080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowedSwapDistance: 3
+  Indicaor: {fileID: 0}
+  timerScript: {fileID: 0}
 --- !u!61 &1307233624
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5711,6 +5725,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5054e06c5ff8945b2b799e3690080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowedSwapDistance: 3
+  Indicaor: {fileID: 0}
+  timerScript: {fileID: 0}
 --- !u!61 &1374496088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6493,6 +6510,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5054e06c5ff8945b2b799e3690080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowedSwapDistance: 3
+  Indicaor: {fileID: 0}
+  timerScript: {fileID: 0}
 --- !u!61 &1505110678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7208,6 +7228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5054e06c5ff8945b2b799e3690080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowedSwapDistance: 3
+  Indicaor: {fileID: 0}
+  timerScript: {fileID: 0}
 --- !u!61 &1656176855
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8063,6 +8086,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5054e06c5ff8945b2b799e3690080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowedSwapDistance: 3
+  Indicaor: {fileID: 0}
+  timerScript: {fileID: 0}
 --- !u!61 &1828715600
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8842,6 +8868,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5054e06c5ff8945b2b799e3690080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowedSwapDistance: 3
+  Indicaor: {fileID: 0}
+  timerScript: {fileID: 0}
 --- !u!61 &2142175163
 BoxCollider2D:
   m_ObjectHideFlags: 0
