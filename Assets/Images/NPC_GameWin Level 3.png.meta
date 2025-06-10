@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 510f66c2784b36b4f80592351769372c
+guid: dce38cb810ac90747938ec7f387e93ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1319999914812358863
-    second: Warehouse Location 1_0
+      213: 5067398463658793536
+    second: NPC_GameWin Level 3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Warehouse Location 1_0
+      name: NPC_GameWin Level 3_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 180
         y: 0
-        width: 1920
+        width: 1404
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc0cfe9cde4915210800000000000000
-      internalID: 1319999914812358863
+      spriteID: 04a1eb1fd04035640800000000000000
+      internalID: 5067398463658793536
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Warehouse Location 1_0: 1319999914812358863
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
