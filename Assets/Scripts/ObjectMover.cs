@@ -61,16 +61,19 @@ public class ObjectMover : MonoBehaviour
             }
             else if (loopEnabled)
             {
-                // Loop to first available spot
+                int LoopIndex = (currentIndex + 1) % waypoints.Count;
+
+                //Look ahead cyclically until a free WP is found
                 for (int i = 0; i < waypoints.Count; i++)
                 {
-                    if (!isOccupied[i])
+                    int tryIndex = (LoopIndex + 1) % waypoints.Count;
+
+                    if (!isOccupied[tryIndex])
                     {
                         MoveTowards(obj, currentIndex, i);
-
-                  
                         break;
                     }
+
                 }
             }
             // else: do nothing, they’re at the end and loop is off
@@ -96,8 +99,11 @@ public class ObjectMover : MonoBehaviour
         if (loopEnabled && targetIndex == 0)
         {
             //set the model's animator to "idle" when looping
-            Animator modelAnimator = obj.transform.GetChild(0).GetComponent<Animator>();
-            modelAnimator.SetBool("idle", true);
+            Animator modelAnimator = obj.GetComponentInChildren<Animator>();
+            if (modelAnimator != null)
+            {
+                modelAnimator.SetBool("idle", loopEnabled && targetIndex == 0);
+            }
         }
         else
         {
