@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
 
 public class DragandDrop : MonoBehaviour
@@ -15,16 +14,14 @@ public class DragandDrop : MonoBehaviour
 
     void OnMouseDown()
     {
-        Time.timeScale = 0;
         if (timerScript != null && timerScript.timer <= 0) return;
 
+        Time.timeScale = 0;
         originalPosition = transform.position;
 
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         offset = transform.position - new Vector3(mouseWorld.x, mouseWorld.y, 0);
         isDragging = true;
-
-
 
         AudioManager.instance.PlayClick();
     }
@@ -36,9 +33,6 @@ public class DragandDrop : MonoBehaviour
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 targetPos = new Vector3(mouseWorld.x, mouseWorld.y, 0) + offset;
         transform.position = new Vector3(targetPos.x, targetPos.y, originalPosition.z);
-
-        // Update indicator position
-
     }
 
     void OnMouseUp()
@@ -47,31 +41,35 @@ public class DragandDrop : MonoBehaviour
         isDragging = false;
         Time.timeScale = 1;
 
-
-
-
-        // Check if overlapping another model to swap
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, 0.1f);
+        // Check for overlapping object
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, 0.3f);
         if (hit != null && hit.transform != transform && Tags.Contains(hit.gameObject.tag))
         {
-            float distance = Vector3.Distance(transform.position, hit.transform.position);
+            float distance = Vector3.Distance(originalPosition, hit.transform.position);
+
             if (distance <= swapDistance)
             {
                 // Swap positions
-                transform.position = hit.transform.position;
+                Vector3 tempPos = hit.transform.position;
                 hit.transform.position = originalPosition;
-                AudioManager.instance.PlaySwish();
-                return;
+                transform.position = tempPos;
+
+                AudioManager.instance.PlaySwish(); // successful swap
+                // Optionally call win-check logic here
+                // GameManager.Instance.CheckForWin();
             }
             else
             {
-                AudioManager.instance.PlayError(); // too far to swap
+                // Too far to swap
+                AudioManager.instance.PlayError();
                 transform.position = originalPosition;
             }
         }
-
-        // If no valid swap, return to original position
-        transform.position = originalPosition;
-
+        else
+        {
+            // Not a valid target or not overlapping
+            transform.position = originalPosition;
+        }
     }
 }
+
