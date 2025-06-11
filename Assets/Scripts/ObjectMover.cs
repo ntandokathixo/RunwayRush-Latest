@@ -67,10 +67,8 @@ public class ObjectMover : MonoBehaviour
                     if (!isOccupied[i])
                     {
                         MoveTowards(obj, currentIndex, i);
-                        //set the model's animator to "idle" when looping
-                        Animator modelAnimator = obj.transform.GetChild(0).GetComponent<Animator>();
-                        modelAnimator.SetBool("idle", true);
 
+                  
                         break;
                     }
                 }
@@ -95,15 +93,17 @@ public class ObjectMover : MonoBehaviour
             objectIndices[obj] = targetIndex; //update the model's currrent waypoint index
         }
 
-        /*if (loopEnabled && targetIndex == 0)
+        if (loopEnabled && targetIndex == 0)
         {
-            
+            //set the model's animator to "idle" when looping
+            Animator modelAnimator = obj.transform.GetChild(0).GetComponent<Animator>();
+            modelAnimator.SetBool("idle", true);
         }
         else
         {
             //set the model's animator to "idle" when looping
             Animator modelAnimator = obj.transform.GetChild(0).GetComponent<Animator>();
             modelAnimator.SetBool("idle", false);
-        } */
+        } 
     }
 }
