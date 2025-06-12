@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d98c0515056fa2a46b9c9126708e1d66
+guid: 41da9ac12020528419637aa54eecd446
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1034207337799103126
-    second: Street Location Draft_0
+      213: 1235725527339582037
+    second: NPC_GameWin Level 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Street Location Draft_0
+      name: NPC_GameWin Level 2_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 180
         y: 0
-        width: 1920
+        width: 1404
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a6dc16ed7e1c5a1f0800000000000000
-      internalID: -1034207337799103126
+      spriteID: 55245f8e1dd262110800000000000000
+      internalID: 1235725527339582037
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Street Location Draft_0: -1034207337799103126
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

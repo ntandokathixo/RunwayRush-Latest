@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4e424f83e4c4a694790d78c0ddc0d67a
+guid: 8071916a9951e6b4dbc7c4eb3d9c71e1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1981491480352047304
-    second: NPC_IntroDialogue_0
+      213: 5982202868152121597
+    second: NPC_GameWin Level 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NPC_IntroDialogue_0
+      name: NPC_GameWin Level 1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 180
         y: 0
-        width: 1920
+        width: 1404
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c0c8d3c00caf7b10800000000000000
-      internalID: 1981491480352047304
+      spriteID: df8b78240dd050350800000000000000
+      internalID: 5982202868152121597
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      NPC_IntroDialogue_0: 1981491480352047304
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

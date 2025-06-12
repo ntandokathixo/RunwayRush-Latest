@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 59d3e8fbbacbbb34abc76eff90744bd3
+guid: 2cc9badf39b2f5d4e8a13100382cc114
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5626976108912781635
-    second: NPC_CountDownDialogue_0
+      213: 1981491480352047304
+    second: NPC_IntroDialogue_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NPC_CountDownDialogue_0
+      name: NPC_IntroDialogue_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 180
         y: 0
-        width: 1920
+        width: 1404
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3492b5345f8071e40800000000000000
-      internalID: 5626976108912781635
+      spriteID: 8c0c8d3c00caf7b10800000000000000
+      internalID: 1981491480352047304
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      NPC_CountDownDialogue_0: 5626976108912781635
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
