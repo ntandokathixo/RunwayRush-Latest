@@ -76,10 +76,10 @@ public class ObjectMover : MonoBehaviour
 
                 }
             }
-            // else: do nothing, they’re at the end and loop is off
+            // else: do nothing, they re at the end and loop is off
         }
     }
-    
+
     void MoveTowards(GameObject obj, int currentIndex, int targetIndex) //function that moves model
     {
         Transform target = waypoints[targetIndex];
@@ -110,6 +110,7 @@ public class ObjectMover : MonoBehaviour
             //set the model's animator to "idle" when looping
             Animator modelAnimator = obj.transform.GetChild(0).GetComponent<Animator>();
             modelAnimator.SetBool("idle", false);
-        } 
+        }
     }
+
 }
