@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class TimerSystem : MonoBehaviour
 {
+    public AudioManager audioManager;
     public float timer = 5f;
     public Text timerText;
     private bool isPaused = false;
@@ -14,6 +15,26 @@ public class TimerSystem : MonoBehaviour
 
     public void Start()
     {
+        //audioManager = FindFirstObjectByType<AudioManager>();
+        //audioManager.musicSource.Stop();
+        audioManager = AudioManager.instance;
+
+        if (audioManager == null)
+        {
+            Debug.LogError("AudioManager not found in the scene!");
+            return;
+        }
+
+        if (audioManager.musicSource != null)
+        {
+            audioManager.musicSource.Stop();
+        }
+        else
+        {
+            Debug.LogError("AudioManager.musicSource is not assigned!");
+        }
+        Time.timeScale = 0;
+
     }
         void Update()
     {
@@ -62,6 +83,12 @@ public class TimerSystem : MonoBehaviour
     {
         isPaused = false;
         Debug.Log("Timer Resumed. isPaused: " + isPaused);
+    }
+
+    public void startTheGame()
+    {
+        Time.timeScale = 1;
+        audioManager.musicSource.Play();
     }
 
 

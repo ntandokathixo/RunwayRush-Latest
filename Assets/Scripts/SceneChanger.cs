@@ -26,4 +26,22 @@ public class SceneChanger : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
+
+    public void GoToLevelOne()
+    {
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level_1"); 
+    }
+
+ 
+    public void GoToLevelTwo()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level_2"); 
+    }
+
+ 
+    public void GoToLevelThree()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level_3"); 
+    }
 }
