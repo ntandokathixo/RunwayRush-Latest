@@ -14,6 +14,9 @@ public class ObjectMover : MonoBehaviour
     public int numb_model;          // numb of models to place on spawnpoints
     public bool loopEnabled = false; //whether objects should loop back to first WP when reaching the end
 
+    public bool idle = false;
+    public bool isWalking = false;
+
     private Dictionary<GameObject, int> objectIndices = new Dictionary<GameObject, int>();
     private bool[] isOccupied; //tracks which WPs are currently occupied 
 
@@ -76,41 +79,43 @@ public class ObjectMover : MonoBehaviour
 
                 }
             }
-            // else: do nothing, they re at the end and loop is off
+            // else: do nothing, they’re at the end and loop is off
         }
     }
-
+    
     void MoveTowards(GameObject obj, int currentIndex, int targetIndex) //function that moves model
     {
         Transform target = waypoints[targetIndex];
         float step = moveSpeed * Time.deltaTime;
 
-        //move the model toward the target
-        obj.transform.position = Vector3.MoveTowards(obj.transform.position, target.position, step);
-
-        //if close enough to the target waypoint, update status
-        if (Vector3.Distance(obj.transform.position, target.position) < 0.05f)
+        // Get Animator component on the object (or child)
+        Animator anim = obj.GetComponentInChildren<Animator>();
+        if (anim != null)
         {
-            isOccupied[currentIndex] = false; //free the previous waypoint
-            isOccupied[targetIndex] = true;  //mark the new waypoint as occupied
-            objectIndices[obj] = targetIndex; //update the model's currrent waypoint index
-        }
+            float distance = Vector3.Distance(obj.transform.position, target.position);
 
-        if (loopEnabled && targetIndex == 0)
-        {
-            //set the model's animator to "idle" when looping
-            Animator modelAnimator = obj.GetComponentInChildren<Animator>();
-            if (modelAnimator != null)
+            // Set animator based on whether object is moving or close to target
+            if (distance > 0.05f)
             {
-                modelAnimator.SetBool("idle", loopEnabled && targetIndex == 0);
+                anim.SetBool("isWalking", true);
+                anim.SetBool("idle", false);
+            }
+            else
+            {
+                anim.SetBool("isWalking", false);
+                anim.SetBool("idle", true);
             }
         }
-        else
+
+        // Move the object
+        obj.transform.position = Vector3.MoveTowards(obj.transform.position, target.position, step);
+
+        // If close enough to target, update tracking
+        if (Vector3.Distance(obj.transform.position, target.position) < 0.05f)
         {
-            //set the model's animator to "idle" when looping
-            Animator modelAnimator = obj.transform.GetChild(0).GetComponent<Animator>();
-            modelAnimator.SetBool("idle", false);
+            isOccupied[currentIndex] = false;
+            isOccupied[targetIndex] = true;
+            objectIndices[obj] = targetIndex;
         }
     }
-
 }

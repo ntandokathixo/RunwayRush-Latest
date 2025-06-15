@@ -14,7 +14,7 @@ public class WinCHeckerManager : MonoBehaviour
 
     private void Update()
     {
-        if (Models.Count == 9)
+        if(Models.Count == 9)
         {
             WinPanel.SetActive(true);
             //Put the Winning condition Here and stop the Timer
