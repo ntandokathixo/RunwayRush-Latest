@@ -5919,6 +5919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlipSpot: {fileID: 856408893}
+  FlipSpot2: {fileID: 0}
 --- !u!50 &315738454
 Rigidbody2D:
   serializedVersion: 5
@@ -7232,6 +7233,8 @@ MonoBehaviour:
   moveSpeed: 2
   numb_model: 9
   loopEnabled: 0
+  idle: 0
+  isWalking: 0
 --- !u!114 &437852960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7247,6 +7250,8 @@ MonoBehaviour:
   Models: []
   Timer: {fileID: 534793244}
   WinPanel: {fileID: 370155501}
+  WinningParticle: {fileID: 2073679566}
+  WinningParticle2: {fileID: 195762729}
 --- !u!1001 &440759726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7819,6 +7824,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 534793244}
+        m_TargetAssemblyTypeName: TimerSystem, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8577,7 +8594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca15167428cc1d42a09c1ee0381cd2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 342220269}
+  audioManager: {fileID: 0}
   timer: 45
   timerText: {fileID: 352297073}
   gameOverPanel: {fileID: 489546851}
@@ -9071,7 +9088,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &761427364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9079,7 +9096,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761427363}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ffac1d30326e0e459ff544dd79853bf, type: 3}
   m_Name: 
@@ -9205,6 +9222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlipSpot: {fileID: 856408893}
+  FlipSpot2: {fileID: 0}
 --- !u!212 &776738855
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11396,18 +11414,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1382564276}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: restart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1044770793}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: GoToLevelTwo
@@ -11818,6 +11824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlipSpot: {fileID: 856408893}
+  FlipSpot2: {fileID: 0}
 --- !u!50 &1245225479
 Rigidbody2D:
   serializedVersion: 5
@@ -12024,6 +12031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlipSpot: {fileID: 856408893}
+  FlipSpot2: {fileID: 0}
 --- !u!50 &1307233622
 Rigidbody2D:
   serializedVersion: 5
@@ -12832,6 +12840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlipSpot: {fileID: 856408893}
+  FlipSpot2: {fileID: 0}
 --- !u!50 &1374496086
 Rigidbody2D:
   serializedVersion: 5
@@ -13555,6 +13564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlipSpot: {fileID: 856408893}
+  FlipSpot2: {fileID: 0}
 --- !u!50 &1505110676
 Rigidbody2D:
   serializedVersion: 5
@@ -14098,8 +14108,8 @@ Transform:
   m_GameObject: {fileID: 1589358084}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.716, y: 0.2929, z: -25.955687}
-  m_LocalScale: {x: 0.92834264, y: 0.92681617, z: 0.93}
+  m_LocalPosition: {x: -1.6854, y: 0.251, z: 0}
+  m_LocalScale: {x: 0.929828, y: 0.9362697, z: 0.93}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 416479192}
@@ -14631,6 +14641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlipSpot: {fileID: 856408893}
+  FlipSpot2: {fileID: 0}
 --- !u!50 &1656176853
 Rigidbody2D:
   serializedVersion: 5
@@ -15670,6 +15681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlipSpot: {fileID: 856408893}
+  FlipSpot2: {fileID: 0}
 --- !u!50 &1828715598
 Rigidbody2D:
   serializedVersion: 5
@@ -21662,6 +21674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlipSpot: {fileID: 856408893}
+  FlipSpot2: {fileID: 0}
 --- !u!50 &2142175161
 Rigidbody2D:
   serializedVersion: 5

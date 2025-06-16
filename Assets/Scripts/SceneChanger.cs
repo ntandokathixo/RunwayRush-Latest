@@ -8,7 +8,8 @@ public class SceneChanger : MonoBehaviour
         if (!string.IsNullOrEmpty(sceneName))
 
         { 
-            SceneManager.LoadScene(sceneName); 
+            SceneManager.LoadScene(sceneName);
+            Time.timeScale = 0;
         
         }
 
@@ -25,5 +26,24 @@ public class SceneChanger : MonoBehaviour
     public void GoToMainMenu()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+
+    }
+
+    public void GoToLevelOne()
+    {
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level_1");
+    }
+
+
+    public void GoToLevelTwo()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level_2");
+    }
+
+
+    public void GoToLevelThree()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level_3");
     }
 }

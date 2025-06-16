@@ -3,11 +3,11 @@ using UnityEngine.UI;
 using TMPro;
 
 public class Level_Manager : MonoBehaviour
+
 {
     public int currentLevel = 1;
-
     // External references
-    public  TextMeshProUGUI messageText;
+    public TextMeshProUGUI messageText;
     public RunwayProgressBar progressBar;
     public RunwayPointSystem pointsSystem;
     //public SetChecker setChecker; 
@@ -16,6 +16,8 @@ public class Level_Manager : MonoBehaviour
     public GameObject tryAgainPanel;
     public Button yesButton;
     public Button noButton;
+   
+
 
     private int setsCompleted = 0;
 

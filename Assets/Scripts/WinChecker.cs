@@ -14,7 +14,6 @@ public class WinChecker : MonoBehaviour
     //Rea's Code
     public string ObjTag;
     public WinCHeckerManager WinManagerScript;
-
     void Start()
     {
         InvokeRepeating(nameof(CheckForWin), 1f, checkDelay);
@@ -82,5 +81,6 @@ public class WinChecker : MonoBehaviour
 
         }
     }
+
 }
 
