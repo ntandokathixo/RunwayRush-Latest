@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
+    
     public void LoadSceneByName(string sceneName)
     {
         if (!string.IsNullOrEmpty(sceneName))
@@ -26,6 +27,8 @@ public class SceneChanger : MonoBehaviour
     public void GoToMainMenu()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+       
+
 
     }
 
@@ -33,6 +36,7 @@ public class SceneChanger : MonoBehaviour
     {
 
         UnityEngine.SceneManagement.SceneManager.LoadScene("Level_1");
+  
     }
 
 
